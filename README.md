@@ -28,7 +28,14 @@ Smart Pot Configurator is an Android application built with **Android Studio** t
 - View real-time soil moisture data.
 - Enable push notifications for low moisture alerts.
 
+
+
 ## Security Considerations
 - **Encrypted Communication**: All data is transmitted over HTTPS.
 - **Two-Factor Authentication**: Requires BLE key exchange for critical actions.
 - **Local Data Protection**: Uses Android Keystore for secure storage of credentials.
+
+# Visualization
+
+![dodawanie_urzadzenia](https://github.com/user-attachments/assets/c696089a-99f8-44d8-b0e7-7057f0a6324c)
+![konfiguracja](https://github.com/user-attachments/assets/d615398a-cc57-469c-9290-605d8a0b42b1)
