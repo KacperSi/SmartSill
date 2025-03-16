@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeviceConfig">
+
+    <TextView
+        android:id="@+id/ip_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:text="ip"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/warning_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/red"
+        android:text="Warning: Low water level!!!"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/network_error_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/red"
+        android:text="Network error!!!"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/bluetooth_error_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/red"
+        android:text="Bluetooth error!!!"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <ToggleButton
+        android:id="@+id/toggle_watering_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="73dp"
+        android:text="ToggleButton"
+        android:textOff="WATERING OFF"
+        android:textOn="WATERING ON"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hum_label_textView"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hum_label_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="51dp"
+        android:text="Humidity:"
+        app:layout_constraintBottom_toTopOf="@+id/textView_humidity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toggle_watering_btn"></TextView>
+
+    <TextView
+        android:id="@+id/textView_humidity"
+        android:layout_width="114dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="47dp"
+        android:hint="humidity"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/toggle_watering_btn"
+        app:layout_constraintTop_toBottomOf="@+id/ip_textView" />
+
+    <TextView
+        android:id="@+id/humidity_min_label_TV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Humidity min [%]"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/humidity_min_ET"
+        app:layout_constraintStart_toStartOf="@+id/humidity_min_ET" />
+
+    <EditText
+        android:id="@+id/humidity_min_ET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:hint="Humidity min [%]"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_watering_btn" />
+
+    <TextView
+        android:id="@+id/humidity_max_label_TV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Humidity max [%]"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/humidity_max_ET"
+        app:layout_constraintStart_toStartOf="@+id/humidity_max_ET" />
+
+    <EditText
+        android:id="@+id/humidity_max_ET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:hint="Humidity max [%]"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidity_min_ET" />
+
+    <TextView
+        android:id="@+id/watering_time_label_TV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Watering time [hh:mm]"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/watering_time_ET"
+        app:layout_constraintStart_toStartOf="@+id/watering_time_ET" />
+
+    <EditText
+        android:id="@+id/watering_time_ET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:hint="Watering time [hh:mm]"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidity_max_ET" />
+
+    <TextView
+        android:id="@+id/watering_max_label_TV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Watering max time [seconds]"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/watering_max_time_ET"
+        app:layout_constraintStart_toStartOf="@+id/watering_max_time_ET" />
+
+    <EditText
+        android:id="@+id/watering_max_time_ET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:hint="Watering max time [seconds]"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/watering_time_ET" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="64dp"
+        android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="@+id/watering_max_time_ET"
+        app:layout_constraintTop_toBottomOf="@+id/watering_max_time_ET" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
